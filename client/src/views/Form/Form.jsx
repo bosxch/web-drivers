@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getTeams, postDriver } from "./../../redux/action";
 import { useNavigate } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 
 const validacion = (input) => {
     let errors = {};
@@ -137,9 +138,18 @@ export default function Form() {
         navigate('/home');
     };
 
+    const handleGoBack = () => {
+        window.history.back(); // Retroceder en la historia del navegador
+    };
+
+
+
     return (
-        <div>
-            <form onSubmit={handleSubmit}>
+        <div className="form-container" >
+            <p to="/home" className="home-link">
+            <i onClick={handleGoBack}>{'<'}</i> 
+            </p>
+            <form onSubmit={handleSubmit} className="fonm-inputs">
                 <label>Nombre : </label>
                 <input onChange={handleChange} name="name" type="text" />
                 {errors.name ? <label>{errors.name}</label> : null}
@@ -171,7 +181,7 @@ export default function Form() {
                     <div>
                         <h3>Escuderías seleccionadas : </h3>
                         {driver.teams.map((team, index) => (
-                            <div key={index}>
+                            <div key={index} className="escuderia-select">
                                 <p>{team}</p>
                                 <button onClick={handleRemove(team)}>X</button>
                             </div>

@@ -113,16 +113,22 @@ export default function Home() {
     }
 
     return (
-        <div>
-            <button onClick={handleReset}>Reset</button>
+        <div className="bg-home">
+            <div className="actions-nav">
+            <div className="utils-container">
+            <button onClick={handleReset} className="btn-23">Reset</button>
             <SearchBar handleChange={handleChange} handleSearch={handleAction} ser={ser} />
             <FilterSec handleChange={handleAction} allTeams={allTeams} filterstate={filterstate} />
             <OrderSec key={resetKey} handleChange={handleAction} orderstate={orderstate} />
+
+            </div>
             <div>
                 {pageNumbers.map((pageNumber) => (
                     <button key={pageNumber} onClick={()=>handlePaginate(pageNumber)}>{pageNumber}</button>
                 ))}
             </div>
+            </div>
+           
             <Cards drivers={currentDrivers} />
         </div>
     );

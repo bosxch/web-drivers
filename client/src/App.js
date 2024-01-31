@@ -15,7 +15,7 @@ function App() {
         <Route path='/' element={<Landing />} />
         <Route path='/home' element={<Home />} />
         <Route path='/detail/:idDriver' element={<Detail />} />
-        <Route path='/create' element={<Form />} />
+        <Route path='/create' className="App-form" element={<Form />} />
         <Route path='*' element={<Error />} />
       </Routes>
     </div>

@@ -11,3 +11,49 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* FORM */
+
+.form-container {
+  height: 90vh;
+  width: 90vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fonm-inputs{
+  padding: 5vh;
+  border-radius: 5vh;
+  background-color: white;
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container label {
+  margin-bottom: 5px; /* Margen inferior para etiquetas */
+}
+
+.form-container input,
+.form-container select {
+  margin-bottom: 10px; /* Margen inferior para inputs y selects */
+  padding: 5px; /* Espaciado interno */
+  border: 1px solid #ccc; /* Borde gris */
+  border-radius: 3px; /* Borde redondeado */
+}
+
+.form-container input[type="submit"] {
+  background-color: #0000ff; /* Color de fondo azul */
+  color: #fff; /* Color del texto blanco */
+  border: none; /* Sin borde */
+  padding: 10px 20px; /* Espaciado interno */
+  cursor: pointer; /* Cambio de cursor al pasar */
+  border-radius: 3px; /* Borde redondeado */
+}
+
+.form-container input[type="submit"]:hover {
+  background-color: #333; /* Color de fondo azul oscuro al pasar */
+}

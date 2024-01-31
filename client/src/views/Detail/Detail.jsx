@@ -1,12 +1,11 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { getDriverById } from "../../redux/action";
 import { useEffect } from "react";
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
+import './Detail.css';
 
 export default function Detail() {
-
     const { idDriver } = useParams();
-
     const dispatch = useDispatch();
     const driver = useSelector((state) => state.driverById);
 
@@ -15,16 +14,22 @@ export default function Detail() {
     }, []);
 
     return (
-        <div>
-            <div>Detail from a Driver</div>
-            <div>ID : {driver.id}</div>
-            <div>NAME : {driver?.name?.forename}</div>
-            <div>LAST NAME : {driver?.name?.surname}</div>
-            <div>DESCRIPTION : {driver.description}</div>
-            <div>IMAGE : {driver?.image?.url}</div>
-            <div>NATIONALITY : {driver.nationality}</div>
-            <div>BIRTHDAY : {driver.dob}</div>
-            <div>TEAMS : {driver.teams}</div>
+        <div className="detail-container" style={{overflow: 'hidden'}}>
+            <Link to="/home" className="home-link">
+                <i >{'<'}</i> {/* Flecha de regreso */}
+            </Link>
+            <div className="driver-details">
+                <div className="driver-image-container">
+                    <img src={driver?.image?.url} alt={driver?.name?.forename} className="driver-image" />
+                </div>
+                <div className="driver-info">
+                    <div className="driver-name">{driver?.name?.forename} {driver?.name?.surname}</div>
+                    <div className="driver-description">{driver?.description}</div>
+                    <div className="driver-nationality">Nationality: {driver?.nationality}</div>
+                    <div className="driver-birthday">Birthday: {driver?.dob}</div>
+                    <div className="driver-teams">Teams: {driver?.teams}</div>
+                </div>
+            </div>
         </div>
     );
 }

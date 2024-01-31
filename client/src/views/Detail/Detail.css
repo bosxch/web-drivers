@@ -1,0 +1,66 @@
+.detail-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  height: 80vh;
+  width: 95%;
+  display: flex;
+  justify-content: center;
+}
+
+.home-link {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  text-decoration: none;
+  color: #333;
+  font-size: 24px;
+}
+
+.driver-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 10vw;
+}
+
+.driver-image-container {
+  margin-right: 20px;
+}
+
+.driver-image {
+  width: 200px;
+  height: auto;
+  border-radius: 50%;
+}
+
+.driver-info {
+  text-align: left;
+  font-size: 18px;
+}
+
+.driver-name {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.driver-description {
+  margin-bottom: 10px;
+}
+
+.driver-nationality,
+.driver-birthday,
+.driver-teams {
+  margin-bottom: 5px;
+}
+
+.home-link{
+  position: absolute;
+  top: 5vh;
+  left: -90vw;
+  color: black;
+  font-size: 5rem;
+}
