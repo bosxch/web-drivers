@@ -1,0 +1,234 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* LANDING */
+
+.landing-container {
+  text-align: center;
+  background-image: url('https://media.gq.com.mx/photos/62041b1eca7b0bd1ee065a33/16:9/w_2560%2Cc_limit/SI202202090248_hires_jpeg_24bit_rgb.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.landing-title {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: white;
+  font-size: 6rem;
+  font-weight: bold;
+  animation: changeColor 3s infinite alternate; /* La animación dura 5 segundos, se repite infinitamente y alterna entre los colores */
+  text-shadow: 15px 15px 15px black; /* Agrega un borde negro alrededor del texto */
+
+}
+
+@keyframes changeColor {
+  0% {
+    color: red; /* Color inicial */
+  }
+  100% {
+    color: white; /* Color final */
+  }
+}
+
+.start-button {
+  background-color: #007bff; /* Color de fondo del botón */
+  color: #fff; /* Color del texto del botón */
+  padding: 10px 20px; /* Ajusta el relleno según sea necesario */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Transición suave para el cambio de color de fondo */
+}
+
+.start-button:hover {
+  background-color: #0056b3; /* Color de fondo del botón al pasar el ratón por encima */
+}
+
+.start-link {
+  text-decoration: none; /* Quitamos la subrayado del enlace */
+  color: inherit; /* Hereda el color del texto del contenedor principal */
+}
+
+.btn-23,
+.btn-23 *,
+.btn-23 :after,
+.btn-23 :before,
+.btn-23:after,
+.btn-23:before {
+  border: 0 solid;
+  box-sizing: border-box;
+}
+
+.btn-23 {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: button;
+  background-color: #000;
+  background-image: none;
+  color: #fff;
+  cursor: pointer;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-size: 100%;
+  font-weight: 900;
+  line-height: 1.5;
+  margin: 0;
+  -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
+  padding: 0;
+  text-transform: uppercase;
+}
+
+.btn-23:disabled {
+  cursor: default;
+}
+
+.btn-23:-moz-focusring {
+  outline: auto;
+}
+
+.btn-23 svg {
+  display: block;
+  vertical-align: middle;
+}
+
+.btn-23 [hidden] {
+  display: none;
+}
+
+.btn-23 {
+  border-radius: 99rem;
+  border-width: 2px;
+  overflow: hidden;
+  padding: 0.8rem 3rem;
+  position: relative;
+}
+
+.btn-23 span {
+  display: grid;
+  inset: 0;
+  place-items: center;
+  position: absolute;
+  transition: opacity 0.2s ease;
+}
+
+.btn-23 .marquee {
+  --spacing: 5em;
+  --start: 0em;
+  --end: 5em;
+  -webkit-animation: marquee 1s linear infinite;
+  animation: marquee 1s linear infinite;
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+  opacity: 0;
+  position: relative;
+  text-shadow: #fff var(--spacing) 0, #fff calc(var(--spacing) * -1) 0,
+    #fff calc(var(--spacing) * -2) 0;
+}
+
+.btn-23:hover .marquee {
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+  opacity: 1;
+}
+
+.btn-23:hover .text {
+  opacity: 0;
+}
+
+@-webkit-keyframes marquee {
+  0% {
+    transform: translateX(var(--start));
+  }
+
+  to {
+    transform: translateX(var(--end));
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(var(--start));
+  }
+
+  to {
+    transform: translateX(var(--end));
+  }
+}
+
+
+/* CARD */
+
+.driver-detail-container {
+  border: 1px solid #ccc; /* Borde de la tarjeta */
+  border-radius: 5px; /* Borde redondeado */
+  margin: 10px; /* Margen exterior */
+  padding: 10px; /* Relleno interior */
+}
+
+.driver-link {
+  text-decoration: none; /* Quitamos la subrayado del enlace */
+  color: inherit; /* Hereda el color del texto del contenedor principal */
+}
+
+.driver-info {
+  display: flex; /* Utilizamos flexbox para distribuir los elementos */
+  flex-direction: column; /* Distribución en columna */
+  align-items: center; /* Centramos los elementos horizontalmente */
+}
+
+.driver-name,
+.driver-lastname,
+.driver-description,
+.driver-nationality,
+.driver-birthday,
+.driver-teams {
+  margin-bottom: 10px; /* Margen inferior */
+}
+
+.driver-image {
+  width: 200px; /* Ancho de la imagen */
+  height: auto; /* Altura automática para mantener la proporción */
+  margin-bottom: 10px; /* Margen inferior */
+}
